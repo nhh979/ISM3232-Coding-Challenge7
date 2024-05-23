@@ -4,5 +4,27 @@
 </head>
 <body>
     <h1>Feedback Form</h1>
+    <form action="">
+        <label for="customerName">Name: </label>
+        <input type="text" name="customerName" id="customerName"><br>
+        <br>
+        <label for="rating">How do you like our service?</label>
+        <select name="rating" id="rating">
+            <option value="" disabled selected>Select your score (1-5)</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>          
+        </select><br>
+        <br>
+        <label for="comment">We'd like to hear your feedback.</label><br>
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write your feedback here."></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="feedbackForm"></div> <!--Display the feedback here after submission-->
+
+    <script src="script.js"></script>
 </body>
 </html>
