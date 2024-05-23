@@ -6,14 +6,12 @@ document.getElementById('feedback').addEventListener('submit', event => {
     const comment = document.getElementById("comment").value;
 
     if (name.trim() === "" || rating === "" || comment.trim() === ""){
-        document.getElementById("feedbackForm").innerHTML = `
-        <h2> Please fill out all fields. </h2>`
-    } else {
-        document.getElementById("feedbackForm").innerHTML = `
+        alert('Please fill out all fields.');
+        return;}
+          
+     document.getElementById("feedbackForm").innerHTML = `
     <h1> Customer Feedback </h1>
     <p><strong>Name: </strong> ${name}</p>
     <p><strong>Rating: </strong> ${rating}</p>
-    <p><strong>Feedback: </strong> ${comment}</p>
-    `
-    }    
+    <p><strong>Feedback: </strong> ${comment}</p>`
 })
